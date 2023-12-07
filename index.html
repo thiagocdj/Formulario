@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div class="page">
+        <header>
+            <h1>
+                Crie e Compartilhe seu evento.
+            </h1>
+            <p>
+                O primeiro passo, é preencher esse formulário de inscrição.
+            </p>
+        </header>
+        <form id="my-form">
+            <!-- Inicio - informações do evento-->
+            <fieldset>
+            <div class="legend-wrapper">
+                <legend>Informações do Evento</legend>
+
+                    <div class="input-wrapper">
+                        <label for="Titulo">
+                            * Título do evento
+                            <span>(mínimo 8 caracteres)</span>
+                        </label>
+                        <input type="text" name="Titulo" id="Titulo" required minlength="8">   
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="link">
+                            Link do evento
+                            <span>(comece com http://)</span>
+                        </label>
+                        <input type="url" name="link" id="link">   
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="contato">
+                            * Whatsapp para contato
+                            <span>(somente números)</span>
+                        </label>
+                        <input type="number" name="contato" id="contato" required maxlength="11">   
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="extra">Informações extras</label>
+                        <textarea name="extra" id="extra" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="category">* Categoria</label>
+                        <select name="category" id="cactegory" required>
+                            <option value=""></option> 
+                            <option value="Festa">Festa</option>
+                            <option value="Cinema">Cinema</option>   
+                        </select>
+                    </div>
+            </div>
+            </fieldset>
+            
+            <!-- Meio - Informações do adm -->
+            <fieldset>
+            <div class="legend-wrapper">
+                    <legend>Privacidade</legend>
+
+                    <div class="input-wrapper">
+                        <label for="email">
+                            * E-mail do administrador
+                            <span>(digite um email válido)</span>
+                        </label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="password">
+                            * Senha de acesso para os participantes
+                            <span>(mínimo 8 caracteres)</span>
+                        </label>
+                        <input type="password" name="password" id="password" required minlength="8">
+                    </div> 
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label for="checkbox">
+                            Evento Privado                            
+                        </label>
+                    </div>
+            </div>                   
+            </fieldset> 
+            <!-- Data do evento -->
+            <fieldset>
+            <div class="legend-wrapper">
+                <legend>Data e Hora</legend>
+                    
+                    <div class="col-3">
+                        <div class="input-wrapper">
+                            <label for="Date">
+                                Data
+                            </label>
+                            <input type="date" name="date" id="date" required>   
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="Time">
+                                Das
+                            </label>
+                            <input type="time" name="time" id="time" required>   
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="Time">
+                                Até
+                            </label>
+                            <input type="time" name="time" id="time" required>   
+                    </div>
+                </div>    
+            </div>
+
+            </fieldset>            
+        </form>
+        <footer>
+            <button form="my-form" class="button" form="my-form">         
+            Salvar Evento 
+            </button>          
+        </footer>
+        </div>
+        
+    </main>
+</body>
+</html>
